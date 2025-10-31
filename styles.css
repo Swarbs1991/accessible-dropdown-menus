@@ -4,6 +4,18 @@ body {
     font-family: "Courier New", Courier, monospace;
 }
 
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section {
+        max-width: calc(100% * 2 / 3);
+        margin: 2rem auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+}
+
 .menu--main {
     list-style: none;
     margin: 0;
@@ -21,12 +33,17 @@ body {
 }
 
 .site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 1rem;
     background: #1a1a1a;
     color: white;
+}
+
+.header--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: calc(100% * 2 / 3);
+    margin: auto;
 }
 
 .site-title {
@@ -36,7 +53,7 @@ body {
 
 footer {
     display: flex;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
     background-color: #1e1c44;

@@ -15,56 +15,96 @@
   <a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
 
   <header class="site-header" role="banner">
-    <div class="site-branding">
-      <img class="logo" src="https://raw.githubusercontent.com/Swarbs1991/swarbs-web/master/images/swarbssmoked.png" alt="Swarbs Smoked Demo Site Logo" />
-    </div>
+    <div class="header--wrap">
+        <div class="site-branding">
+        <img class="logo" src="https://raw.githubusercontent.com/Swarbs1991/swarbs-web/master/images/swarbssmoked.png" alt="Swarbs Smoked Demo Site Logo" />
+        </div>
 
-    <nav class="site-nav" role="navigation" aria-label="Main">
-      <ul class="menu--main">
-        <li class="menu-item menu-item--collapsed has--children">
-        <a href="#home">Home</a>
-          <ul class="menu--sub-menu">
-            <li class="menu-item"><a href="#home-1">Home child 1</a></li>
-            <li class="menu-item"><a href="#home-2">Home child 2</a></li>
-            <li class="menu-item"><a href="#home-3">Home child 3</a></li>
-            <li class="menu-item"><a href="#home-4">Home child 4</a></li>
-          </ul>
-        </li>
-        <li class="menu-item menu-item--collapsed has--children"><a href="#about">About</a>
-          <ul class="menu--sub-menu">
-            <li class="menu-item"><a href="#about-1">About child 1</a></li>
-            <li class="menu-item"><a href="#about-2">About child 2</a></li>
-            <li class="menu-item"><a href="#about-3">About child 3</a></li>
-            <li class="menu-item"><a href="#about-4">About child 4</a></li>
-          </ul>
-        </li>
-        <li class="menu-item menu-item--collapsed has--children"><a href="#services">Services</a>
-          <ul class="menu--sub-menu">
-            <li class="menu-item"><a href="#services-1">Services child 1</a></li>
-            <li class="menu-item"><a href="#services-2">Services child 2</a></li>
-            <li class="menu-item"><a href="#services-3">Services child 3</a></li>
-            <li class="menu-item"><a href="#services-4">Services child 4</a></li>
-          </ul>
-        </li>
-        <li class="menu-item menu-item--collapsed has--children"><a href="#blog">Blog</a>
-          <ul class="menu--sub-menu">
-            <li class="menu-item"><a href="#blog-1">Blog child 1</a></li>
-            <li class="menu-item"><a href="#blog-2">Blog child 2</a></li>
-            <li class="menu-item"><a href="#blog-3">Blog child 3</a></li>
-            <li class="menu-item"><a href="#blog-4">Blog child 4</a></li>
-          </ul>
-        </li>
-        <li class="menu-item"><a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
+        <nav class="site-nav" role="navigation" aria-label="Main">
+        <ul class="menu--main">
+            <li class="menu-item menu-item--collapsed has--children">
+            <a href="#intro">Intro</a>
+            <ul class="menu--sub-menu">
+                <li class="menu-item"><a href="#home-1">Home child 1</a></li>
+                <li class="menu-item"><a href="#home-2">Home child 2</a></li>
+                <li class="menu-item"><a href="#home-3">Home child 3</a></li>
+                <li class="menu-item"><a href="#home-4">Home child 4</a></li>
+            </ul>
+            </li>
+            <li class="menu-item menu-item--collapsed has--children">
+            <a href="#usage">Usage</a>
+            <ul class="menu--sub-menu">
+                <li class="menu-item"><a href="#about-1">About child 1</a></li>
+                <li class="menu-item"><a href="#about-2">About child 2</a></li>
+                <li class="menu-item"><a href="#about-3">About child 3</a></li>
+                <li class="menu-item"><a href="#about-4">About child 4</a></li>
+            </ul>
+            </li>
+            <li class="menu-item menu-item--collapsed has--children">
+            <a href="#features">Features</a>
+            <ul class="menu--sub-menu">
+                <li class="menu-item"><a href="#services-1">Services child 1</a></li>
+                <li class="menu-item"><a href="#services-2">Services child 2</a></li>
+                <li class="menu-item"><a href="#services-3">Services child 3</a></li>
+                <li class="menu-item"><a href="#services-4">Services child 4</a></li>
+            </ul>
+            </li>
+            <li class="menu-item menu-item--collapsed has--children">
+            <a href="#resources">Links</a>
+            <ul class="menu--sub-menu">
+                <li class="menu-item"><a href="#blog-1">Blog child 1</a></li>
+                <li class="menu-item"><a href="#blog-2">Blog child 2</a></li>
+                <li class="menu-item"><a href="#blog-3">Blog child 3</a></li>
+                <li class="menu-item"><a href="#blog-4">Blog child 4</a></li>
+            </ul>
+            </li>
+            <li class="menu-item"><a href="#contact">Contact</a>
+            </li>
+        </ul>
+        </nav>
+    </div>
   </header>
 
   <main id="main-content" tabindex="-1">
-    <section>
-      <h2>Hello World!</h2>
-      <p>This is a minimal HTML5 page with a header navigation containing five links as list items.</p>
+    <section id="intro">
+      <h2>Intro</h2>
+      <p>A collection of accessible dropdown menu components designed specifically for LocalGov Drupal sites. This demo provides CSS classes and JavaScript functionality to create navigation menus that are keyboard friendly and screen reader accessible.</p>
     </section>
+
+    <section id="usage">
+      <h2>Usage</h2>
+      <p>This demo uses some classes specific to the LocalGov Drupal project and focuses on improving accessibility when adding child items to the main navigation as dropdown menus. The pattern keeps top-level items as real links while providing a separate, keyboard-focusable toggle to open a submenu.</p>
+      <p>Specifically done for desktop and large screens.</p>
+      <p>Key usage notes:</p>
+      <ul>
+        <li>Keep anchors as navigation links so they still lead to section landing pages.</li>
+        <li>Use the chevron toggle to expand/collapse submenus without navigating away.</li>
+        <li>ARIA attributes (aria-expanded, aria-controls, aria-hidden) are managed by the script for assistive technologies.</li>
+      </ul>
+    </section>
+
+    <section id="features">
+      <h2>Features</h2>
+      <ul>
+        <li>WCAG 2.1 AA friendly dropdown menus</li>
+        <li>Keyboard navigation and focus management</li>
+        <li>Screen reader compatible markup and ARIA states</li>
+        <li>Integrates with LocalGov Drupal CSS conventions</li>
+        <li>Responsive behaviour for small screens</li>
+      </ul>
+    </section>
+
+    <section id="resources">
+      <h2>Resources / Links</h2>
+      <p>Useful references used while building this demo:</p>
+      <ul>
+        <li><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0 License</a></li>
+        <li><a href="https://localgovdrupal.org/">LocalGov Drupal</a></li>
+        <li><a href="https://www.w3.org/WAI/tutorials/menus/flyout/">WAI: Flyout menus</a></li>
+        <li><a href="https://www.a11y-collective.com/blog/mastering-web-accessibility-making-drop-down-menus-user-friendly/#h-challenge-1-mouse-navigation">A11y Collective: dropdown menus</a></li>
+      </ul>
+    </section>
+
   </main>
 
   <footer role="contentinfo">
