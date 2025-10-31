@@ -65,3 +65,14 @@ footer {
 footer p {
     color: white;
 }
+
+/* Flash highlight animation for section headings after navigation */
+.flash-highlight {
+    animation: flash-highlight 900ms ease-out;
+}
+
+@keyframes flash-highlight {
+    0% { background-color: rgba(255, 255, 0, 0.95); }
+    60% { background-color: rgba(255, 255, 0, 0.6); }
+    100% { background-color: transparent; }
+}
