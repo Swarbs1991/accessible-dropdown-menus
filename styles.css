@@ -4,6 +4,25 @@ body {
     font-family: "Courier New", Courier, monospace;
 }
 
+/* Prevent horizontal overflow and ensure predictable sizing */
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Use border-box universally to avoid elements spilling outside their containers */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+html { box-sizing: border-box; }
+
+/* Media elements should not exceed their containers */
+img, picture, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 main {
   width: 80%;
   margin: 0 auto;
