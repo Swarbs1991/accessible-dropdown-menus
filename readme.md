@@ -12,7 +12,9 @@ A collection of accessible dropdown menu components designed specifically for Lo
 
 ## Usage
 
-This demo uses some classes specific to the LocalGove Drupal project and is focused on improving accessibility when adding child items to the main nav as dropdown menus using the CSS.
+This demo uses some classes specific to the LocalGov Drupal project and is focused on improving accessibility when adding child items to the main nav as dropdown menus using the CSS.
+
+Specifically done for desktop and large screens.
 
 More specifically, this has been developed for an exanple where the main menu items also need to links in their own right to link to content on other pages.
 
