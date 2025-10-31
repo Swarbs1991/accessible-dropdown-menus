@@ -1,0 +1,105 @@
+/** Main Nav **/
+.lgd-header__toggles {
+    display: none;
+}
+
+.menu--main li.menu-item.has--children > a {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    padding-right: 2rem;
+}
+
+.menu--main li.menu-item.has--children > a,
+.menu--sub-menu > li.menu-item a {
+    color: white;
+}
+
+nav li.menu-item.has--children a::after,
+.menu--sub-menu li.menu-item a::after {
+    content: var(--btn-start-icon);
+    position: absolute;
+    font-size: 1rem;
+    right: 0.75rem;
+}
+
+.menu--main li.menu-item.has--children > a::after {
+    transform: rotate(90deg);
+}
+
+.menu--main li.menu-item.has--children > a:hover > .menu--main li.menu-item.has--children > a::after,
+.menu--main li.menu-item.has--children > a:focus-within > .menu--main li.menu-item.has--children > a::after {
+    transform: rotate(270deg);
+    transition: 0.2s;
+}
+
+.menu--main li.menu-item.has--children > a:hover,
+.menu--main li.menu-item.has--children > a:focus {
+	color: black;
+    background-color: white;
+}
+
+.menu--main li.menu-item.has--children > a:hover::after,
+.menu--main li.menu-item.has--children > a:focus-within::after {
+    rotate: 180deg;
+    transition: 0.3s ease;
+}
+
+/** Sub menus **/
+.menu--sub-menu {
+    position: absolute;
+    width: max-content;
+    height: 0;
+    opacity: 0;
+    flex-flow: column;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+li.menu-item--expanded:hover > ul.menu--sub-menu,
+li.menu-item--expanded:focus-within > ul.menu--sub-menu {
+    height: fit-content;
+    opacity: 1;
+    z-index: 999999;
+}
+
+.menu--main > .menu-item .menu--sub-menu li {
+    position: relative;
+    margin: 0;
+}
+
+.menu--sub-menu li.menu-item a::after {
+    color: inherit;
+    position: absolute;
+    right: 1rem;
+}
+
+.menu-item--expanded .menu--sub-menu li a {
+    background-color: var(--color-theme-primary);
+    padding-right: 2rem;
+}
+
+.menu-item--expanded .menu--sub-menu li a:hover::after {
+    right: 5px;
+    transition: 0.3s ease;
+}
+
+/* Demo: submenu border that matches the theme color, and hover/focus text color */
+.menu--sub-menu {
+    border: 1px solid var(--color-theme-primary);
+    border-radius: var(--border-rounding);
+    background-color: #fff; /* keep submenu background white for contrast */
+    padding: 0.25rem;
+}
+
+.menu--sub-menu li.menu-item a:hover,
+.menu--sub-menu li.menu-item a:focus {
+    color: var(--color-theme-primary);
+}
+
+/* Also ensure top-level menu items use the theme blue on hover/focus (demo) */
+.menu--main > .menu-item a:hover,
+.menu--main > .menu-item a:focus {
+    color: var(--color-theme-primary);
+}

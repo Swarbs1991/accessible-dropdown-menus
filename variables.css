@@ -1,0 +1,33 @@
+/* Project CSS variables and small helpers
+ * - Start here with commonly used custom properties
+ * - --btn-start-icon contains the Font Awesome chevron-right glyph (free)
+ *
+ * Note: this demo does not bundle Font Awesome. To render the icon you must
+ * load Font Awesome Free (CSS) in the page head, for example:
+ *
+ * <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ *
+ * Adjust --fa-font-family/--fa-font-weight if you use a different FA version.
+ */
+:root {
+    /* Font Awesome settings (adjust per version) */
+    --fa-font-family: "Font Awesome 5 Free";
+    --fa-font-weight: 900;
+
+    /* chevron-right (Font Awesome Free) */
+    --btn-start-icon: "\f054";
+
+    /* demo theme variables (used by other stylesheets) */
+    --color-theme-primary: #1a73e8;
+    --spacing: 1rem;
+    --width-container: 1200px;
+    --border-rounding: 4px;
+}
+
+/* Helper: ensure pseudo-elements that use --btn-start-icon render with FA */
+.menu--main li a::after,
+.menu--sub-menu li a::after {
+    font-family: var(--fa-font-family);
+    font-weight: var(--fa-font-weight);
+    speak: none;
+}

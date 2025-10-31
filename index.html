@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible Dropdown Menus — Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="menu-main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-branding">
+      <img class="logo" src="https://raw.githubusercontent.com/Swarbs1991/swarbs-web/master/images/swarbssmoked.png" alt="Swarbs Smoked Demo Site Logo" />
+    </div>
+
+    <nav class="site-nav" role="navigation" aria-label="Main">
+      <ul class="menu--main">
+        <li class="menu-item menu-item--collapsed has--children">
+        <a href="#home">Home</a>
+          <ul class="menu--sub-menu">
+            <li class="menu-item"><a href="#home-1">Home child 1</a></li>
+            <li class="menu-item"><a href="#home-2">Home child 2</a></li>
+            <li class="menu-item"><a href="#home-3">Home child 3</a></li>
+            <li class="menu-item"><a href="#home-4">Home child 4</a></li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item--collapsed has--children"><a href="#about">About</a>
+          <ul class="menu--sub-menu">
+            <li class="menu-item"><a href="#about-1">About child 1</a></li>
+            <li class="menu-item"><a href="#about-2">About child 2</a></li>
+            <li class="menu-item"><a href="#about-3">About child 3</a></li>
+            <li class="menu-item"><a href="#about-4">About child 4</a></li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item--collapsed has--children"><a href="#services">Services</a>
+          <ul class="menu--sub-menu">
+            <li class="menu-item"><a href="#services-1">Services child 1</a></li>
+            <li class="menu-item"><a href="#services-2">Services child 2</a></li>
+            <li class="menu-item"><a href="#services-3">Services child 3</a></li>
+            <li class="menu-item"><a href="#services-4">Services child 4</a></li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item--collapsed has--children"><a href="#blog">Blog</a>
+          <ul class="menu--sub-menu">
+            <li class="menu-item"><a href="#blog-1">Blog child 1</a></li>
+            <li class="menu-item"><a href="#blog-2">Blog child 2</a></li>
+            <li class="menu-item"><a href="#blog-3">Blog child 3</a></li>
+            <li class="menu-item"><a href="#blog-4">Blog child 4</a></li>
+          </ul>
+        </li>
+        <li class="menu-item"><a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section>
+      <h2>Hello World!</h2>
+      <p>This is a minimal HTML5 page with a header navigation containing five links as list items.</p>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Demo Site</p>
+  </footer>
+  <script src="nav.js" defer></script>
+</body>
+</html>
