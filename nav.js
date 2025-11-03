@@ -6,7 +6,8 @@
 (function () {
   'use strict';
 
-  const MENU_ITEM_CHILD_CLASS = 'has--children';
+  // Instead of relying on a special CSS class on parent items, detect
+  // list items that have a direct child <ul> (the submenu).
   const UNCOLLAPSED_CLASS = 'uncollapsed';
   const COLLAPSED_CLASS = 'collapsed';
   const EXPANDED_CLASS = 'menu-item--expanded';
@@ -92,13 +93,25 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('li.' + MENU_ITEM_CHILD_CLASS);
-    items.forEach((li) => {
-      // Initialize aria-expanded if missing
+    // Select top-level menu items from the main menu and attach behaviour
+    // to those which have a submenu as a direct child (e.g. <ul class="menu--sub-menu">)
+    const rootItems = document.querySelectorAll('ul.menu--main > li');
+    rootItems.forEach((li) => {
+      // Only attach behaviour to items that have a direct child <ul>
+      const submenu = li.querySelector(':scope > ul');
+      if (!submenu) return;
+
+      // Initialize aria-expanded on the anchor toggle if missing
       const toggle = li.querySelector(':scope > a');
       if (toggle && !toggle.hasAttribute('aria-expanded')) {
         toggle.setAttribute('aria-expanded', 'false');
       }
+
+      // Ensure the li has an explicit aria-expanded state as well
+      if (!li.hasAttribute('aria-expanded')) {
+        li.setAttribute('aria-expanded', 'false');
+      }
+
       attach(li);
     });
   });
